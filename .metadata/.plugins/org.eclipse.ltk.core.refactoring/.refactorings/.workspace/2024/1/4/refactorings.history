@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="删除资源“CubeMX_STM32F407VET6/User”" deleteContents="false" description="删除资源“CubeMX_STM32F407VET6/User”" element1="/CubeMX_STM32F407VET6/User" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1705809914896"/>
+</session>

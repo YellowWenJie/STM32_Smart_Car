@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "tim.h": "c",
+    "ios": "c",
+    "nrf24l01.h": "c",
+    "joy.h": "c",
+    "oledfont.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "enabled",
+  "files.encoding": "utf8",
+  "stm32-for-vscode.openOCDPath": false,
+  "stm32-for-vscode.armToolchainPath": false
+}

@@ -1,0 +1,8 @@
+../User/Motor/motor.c:17:6:Set_Pwmb	2
+../User/Motor/motor.c:27:6:Set_Pwma	2
+../User/Motor/motor.c:38:6:Motor_Right	1
+../User/Motor/motor.c:43:6:Motor_Left	1
+../User/Motor/motor.c:54:5:myabs	2
+../User/Motor/motor.c:75:7:Motor_Speed	5
+../User/Motor/motor.c:106:6:Motor_Redirect	1
+../User/Motor/motor.c:129:6:Containment	6

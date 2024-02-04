@@ -1,0 +1,5 @@
+../User/Motor/motor.c:16:6:Motor	9
+../User/Motor/motor.c:78:5:myabs	2
+../User/Motor/motor.c:91:6:Set_Pwm	9
+../User/Motor/motor.c:127:6:Set_Speed	1
+../User/Motor/motor.c:135:6:Directional_Control	9

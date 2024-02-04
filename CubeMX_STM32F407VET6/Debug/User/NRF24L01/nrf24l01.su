@@ -1,0 +1,13 @@
+../User/NRF24L01/nrf24l01.c:24:6:delay_us	24	static
+../User/NRF24L01/nrf24l01.c:36:6:NRF24L01_Init	8	static
+../User/NRF24L01/nrf24l01.c:46:15:nRF24_SPI_Send_Byte	32	static
+../User/NRF24L01/nrf24l01.c:54:15:NRF24L01_Write_Reg	24	static
+../User/NRF24L01/nrf24l01.c:64:15:NRF24L01_Read_Reg	24	static
+../User/NRF24L01/nrf24l01.c:76:15:NRF24L01_Read_Buf	24	static
+../User/NRF24L01/nrf24l01.c:89:15:NRF24L01_Write_Buf	24	static
+../User/NRF24L01/nrf24l01.c:102:15:NRF24L01_TxPacket	24	static
+../User/NRF24L01/nrf24l01.c:130:15:NRF24L01_RxPacket	24	static
+../User/NRF24L01/nrf24l01.c:152:6:RX_Mode	8	static
+../User/NRF24L01/nrf24l01.c:179:6:TX_Mode	8	static
+../User/NRF24L01/nrf24l01.c:206:15:NRF24L01_Check	24	static
+../User/NRF24L01/nrf24l01.c:225:6:NRF24L01_RX_Start	8	static

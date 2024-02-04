@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“CubeMX_STM32F103C8T6/User/2.4G/Wireless_Communication”重命名为“Wireless_Communication.h”" description="重命名资源“Wireless_Communication”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="User/2.4G/Wireless_Communication" name="Wireless_Communication.h" stamp="1706963855839" updateReferences="true"/>
+</session>

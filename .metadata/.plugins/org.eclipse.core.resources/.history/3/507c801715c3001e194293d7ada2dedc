@@ -1,0 +1,12 @@
+/*
+ * joy.c
+ *
+ *  Created on: Feb 4, 2024
+ *      Author: YellowWenJie
+ */
+
+
+//通过DMA通道转换得到的值
+uint32_t JOY_VALUE[2];
+//保存转换计算后的电压值
+float ADC_VOL_VALUE[2];

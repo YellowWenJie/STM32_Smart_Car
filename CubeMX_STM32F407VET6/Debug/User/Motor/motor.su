@@ -1,0 +1,5 @@
+../User/Motor/motor.c:16:6:Motor	16	static
+../User/Motor/motor.c:78:5:myabs	24	static
+../User/Motor/motor.c:91:6:Set_Pwm	24	static
+../User/Motor/motor.c:127:6:Set_Speed	16	static
+../User/Motor/motor.c:135:6:Directional_Control	16	static
