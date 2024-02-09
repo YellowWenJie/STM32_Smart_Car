@@ -1,0 +1,23 @@
+12:37:20 **** Incremental Build of configuration Debug for project CubeMX_STM32H750VBT6 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I../User/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "CubeMX_STM32H750VBT6.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\YellowWenJie\STM32Cube\WorkSpace\CubeMX_STM32H750VBT6\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CubeMX_STM32H750VBT6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CubeMX_STM32H750VBT6.elf
+ 
+arm-none-eabi-size  CubeMX_STM32H750VBT6.elf 
+arm-none-eabi-objdump -h -S CubeMX_STM32H750VBT6.elf  > "CubeMX_STM32H750VBT6.list"
+arm-none-eabi-objcopy  -O ihex CubeMX_STM32H750VBT6.elf  "CubeMX_STM32H750VBT6.hex"
+   text	   data	    bss	    dec	    hex	filename
+  35576	     36	   1876	  37488	   9270	CubeMX_STM32H750VBT6.elf
+arm-none-eabi-objcopy  -O binary CubeMX_STM32H750VBT6.elf  "CubeMX_STM32H750VBT6.bin"
+Finished building: default.size.stdout
+ 
+Finished building: CubeMX_STM32H750VBT6.hex
+Finished building: CubeMX_STM32H750VBT6.bin
+ 
+ 
+Finished building: CubeMX_STM32H750VBT6.list
+ 
+
+12:37:22 Build Finished. 0 errors, 0 warnings. (took 1s.768ms)
+

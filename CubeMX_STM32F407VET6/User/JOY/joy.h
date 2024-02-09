@@ -14,5 +14,6 @@
 extern unsigned char tmp_buf[32];
 uint16_t *NRF24Lo1_RX_Adjusted_ADC_Data();
 uint16_t *Joystick_Data();
+void Car_Direction(void);
 
 #endif /* JOY_JOY_H_ */

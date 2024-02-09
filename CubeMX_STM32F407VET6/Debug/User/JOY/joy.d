@@ -30,7 +30,8 @@ User/JOY/joy.o: ../User/JOY/joy.c ../User/JOY/joy.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/main.h ../User/JOY/../NRF24L01/nrf24l01.h
+ ../Core/Inc/main.h ../User/JOY/../NRF24L01/nrf24l01.h \
+ ../User/JOY/../Motor/motor.h
 ../User/JOY/joy.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -65,3 +66,4 @@ User/JOY/joy.o: ../User/JOY/joy.c ../User/JOY/joy.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/main.h:
 ../User/JOY/../NRF24L01/nrf24l01.h:
+../User/JOY/../Motor/motor.h:

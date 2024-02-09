@@ -34,13 +34,13 @@ void Motor(Motor_Single motor_single, uint8_t num)
   case Front_Right:
     if (num == 1)
     {
-      HAL_GPIO_WritePin(Front_BIN1_GPIO_Port, Front_BIN1_Pin, GPIO_PIN_SET);   // 0
-      HAL_GPIO_WritePin(Front_BIN2_GPIO_Port, Front_BIN2_Pin, GPIO_PIN_RESET); // 1
+      HAL_GPIO_WritePin(Front_BIN1_GPIO_Port, Front_BIN1_Pin, GPIO_PIN_RESET); // 0
+      HAL_GPIO_WritePin(Front_BIN2_GPIO_Port, Front_BIN2_Pin, GPIO_PIN_SET);   // 1
     }
     else
     {
-      HAL_GPIO_WritePin(Front_BIN1_GPIO_Port, Front_BIN1_Pin, GPIO_PIN_RESET); // 1
-      HAL_GPIO_WritePin(Front_BIN2_GPIO_Port, Front_BIN2_Pin, GPIO_PIN_SET);   // 0
+      HAL_GPIO_WritePin(Front_BIN1_GPIO_Port, Front_BIN1_Pin, GPIO_PIN_SET);   // 1
+      HAL_GPIO_WritePin(Front_BIN2_GPIO_Port, Front_BIN2_Pin, GPIO_PIN_RESET); // 0
     }
     break;
 

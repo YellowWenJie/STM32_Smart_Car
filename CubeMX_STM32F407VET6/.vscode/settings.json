@@ -4,7 +4,8 @@
     "ios": "c",
     "nrf24l01.h": "c",
     "joy.h": "c",
-    "oledfont.h": "c"
+    "oledfont.h": "c",
+    "motor.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled",
   "files.encoding": "utf8",

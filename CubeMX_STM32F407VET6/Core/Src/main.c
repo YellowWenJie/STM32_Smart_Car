@@ -101,8 +101,9 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-  // int SPEED = 0;
-  // int increment = 100;
+  int SPEED = 4000;
+  int increment = 100;
+
   NRF24L01_RX_Start();
   uint16_t *ADC_DATA;
 
@@ -131,7 +132,6 @@ int main(void)
     OLED_ShowNum(48, 6, ADC_DATA[3], 4, 16);
 
     // SPEED += increment;
-
     // if (SPEED == 8400 || SPEED == 0)
     // {
     //   // 当 a 达到100或0时，切换增量的符号
@@ -140,6 +140,28 @@ int main(void)
     // HAL_Delay(100);
     // Set_Speed(SPEED);
     // Directional_Control(Directional_Front);
+
+    // HAL_Delay(1000);
+    // Set_Pwm(Front_Left, SPEED);
+    // HAL_Delay(1000);
+    // Set_Pwm(Front_Left, 0);
+
+    // HAL_Delay(1000);
+    // Set_Pwm(Front_Right, SPEED);
+    // HAL_Delay(1000);
+    // Set_Pwm(Front_Right, 0);
+
+    // HAL_Delay(1000);
+    // Set_Pwm(Back_Left, SPEED);
+    // HAL_Delay(1000);
+    // Set_Pwm(Back_Left, 0);
+
+    // HAL_Delay(1000);
+    // Set_Pwm(Back_Right, SPEED);
+    // HAL_Delay(1000);
+    // Set_Pwm(Back_Right, 0);
+
+    Car_Direction();
 
     /* USER CODE END WHILE */
 

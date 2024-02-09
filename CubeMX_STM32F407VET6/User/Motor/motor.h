@@ -48,6 +48,7 @@ void Motor(Motor_Single motor_single, uint8_t num);
 void Set_Pwm(Motor_Single motor_single, int pwm);
 void Set_Speed(int speed);
 void Directional_Control(Directional direction);
+extern int Speed;
 
 #ifndef MOTOR_H_
 #define MOTOR_H_

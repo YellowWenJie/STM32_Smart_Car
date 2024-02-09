@@ -1,3 +1,2 @@
-../User/JOY/joy.c:14:11:NRF24Lo1_RX_Adjusted_ADC_Data	6
-../User/JOY/joy.c:48:11:Joystick_Data	1
-../User/JOY/joy.c:58:6:Car_Forward	1
+../User/JOY/joy.c:15:11:NRF24Lo1_RX_Adjusted_ADC_Data	7
+../User/JOY/joy.c:64:6:Car_Direction	1

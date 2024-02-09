@@ -1,10 +1,10 @@
-22:39:26 **** Incremental Build of configuration Debug for project CubeMX_STM32F407VET6 ****
+22:31:21 **** Build of configuration Debug for project CubeMX_STM32F407VET6 ****
 make -j4 all 
 arm-none-eabi-size  CubeMX_STM32F407VET6.elf 
    text	   data	    bss	    dec	    hex	filename
-  27776	    140	   2468	  30384	   76b0	CubeMX_STM32F407VET6.elf
+  28796	    140	   2476	  31412	   7ab4	CubeMX_STM32F407VET6.elf
 Finished building: default.size.stdout
  
 
-22:39:26 Build Finished. 0 errors, 0 warnings. (took 457ms)
+22:31:22 Build Finished. 0 errors, 0 warnings. (took 510ms)
 
