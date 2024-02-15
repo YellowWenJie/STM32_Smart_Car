@@ -32,7 +32,7 @@ User/Src/lcd_169.o: ../User/Src/lcd_169.c ../User/Inc/lcd_169.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../Core/Inc/usart.h ../Core/Inc/main.h ../Core/Inc/spi.h \
- ../Core/Inc/main.h ../User/Inc/lcd_fonts.h
+ ../Core/Inc/main.h ../User/Inc/lcd_fonts.h ../User/Inc/lcd_image.h
 ../User/Inc/lcd_169.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -71,3 +71,4 @@ User/Src/lcd_169.o: ../User/Src/lcd_169.c ../User/Inc/lcd_169.h \
 ../Core/Inc/spi.h:
 ../Core/Inc/main.h:
 ../User/Inc/lcd_fonts.h:
+../User/Inc/lcd_image.h:

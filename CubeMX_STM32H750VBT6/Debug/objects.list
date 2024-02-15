@@ -32,4 +32,5 @@
 "./Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.o"
 "./User/Src/lcd_169.o"
 "./User/Src/lcd_fonts.o"
+"./User/Src/lcd_image.o"
 "./User/Src/led.o"

@@ -7,6 +7,7 @@
 #include "main.h"
 
 #include "lcd_fonts.h" // 图片和字库文件不是必须，用户可自行删减
+#include "lcd_image.h"
 
 /*----------------------------------------------- 参数宏 -------------------------------------------*/
 
@@ -114,5 +115,9 @@ void LCD_CopyBuffer(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uin
 
 #define LCD_DC_Command HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_RESET); // 低电平，指令传输
 #define LCD_DC_Data HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_SET);      // 高电平，数据传输
+
+/*----------------------------------------------- 功能函数 -------------------------------------------*/
+
+void LCD_Test_Grahic(void);
 
 #endif //__spi_lcd

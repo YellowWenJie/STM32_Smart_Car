@@ -1556,3 +1556,28 @@ HAL_StatusTypeDef LCD_SPI_TransmitBuffer(SPI_HandleTypeDef *hspi, uint16_t *pDat
   }
   return errorcode;
 }
+/*----------------------------------------------- 功能函数 -------------------------------------------*/
+/*************************************************************************************************
+ *	函 数 名:	LCD_Test_Image
+ *
+ *	函数功能:	图片显示测试
+ *************************************************************************************************/
+void LCD_Test_Image(void)
+{
+  LCD_SetBackColor(LCD_BLACK); //	设置背景色
+  LCD_Clear();                 // 清屏
+
+  LCD_SetColor(0xffF6E58D);
+  LCD_DrawImage(19, 41, 83, 83, Image_Android_83x83); // 显示图片
+
+  LCD_SetColor(0xffDFF9FB);
+  LCD_DrawImage(141, 41, 83, 83, Image_Message_83x83); // 显示图片
+
+  LCD_SetColor(0xff9DD3A8);
+  LCD_DrawImage(19, 160, 83, 83, Image_Toys_83x83); // 显示图片
+
+  LCD_SetColor(0xffFF8753);
+  LCD_DrawImage(141, 160, 83, 83, Image_Video_83x83); // 显示图片
+
+  HAL_Delay(2000);
+}

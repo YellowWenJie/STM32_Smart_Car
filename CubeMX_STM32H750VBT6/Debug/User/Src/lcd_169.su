@@ -33,3 +33,4 @@
 ../User/Src/lcd_169.c:1241:6:LCD_SPI_CloseTransfer	24	static
 ../User/Src/lcd_169.c:1303:19:LCD_SPI_Transmit	56	static
 ../User/Src/lcd_169.c:1435:19:LCD_SPI_TransmitBuffer	48	static
+../User/Src/lcd_169.c:1565:6:LCD_Test_Image	16	static

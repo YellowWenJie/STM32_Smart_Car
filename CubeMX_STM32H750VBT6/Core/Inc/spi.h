@@ -22,8 +22,7 @@
 #define __SPI_H__
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -32,25 +31,26 @@ extern "C"
 /* USER CODE BEGIN Includes */
 #include "lcd_169.h"
 
-  /* USER CODE END Includes */
+/* USER CODE END Includes */
 
-  extern SPI_HandleTypeDef hspi4;
+extern SPI_HandleTypeDef hspi4;
 
-  /* USER CODE BEGIN Private defines */
+/* USER CODE BEGIN Private defines */
 
 #define GPIO_LDC_Backlight_CLK_ENABLE __HAL_RCC_GPIOD_CLK_ENABLE() // 背光 GPIO时钟
 #define GPIO_LDC_DC_CLK_ENABLE __HAL_RCC_GPIOE_CLK_ENABLE()        // 数据指令选择  GPIO时钟
 
-  /* USER CODE END Private defines */
+/* USER CODE END Private defines */
 
-  void MX_SPI4_Init(void);
+void MX_SPI4_Init(void);
 
-  /* USER CODE BEGIN Prototypes */
+/* USER CODE BEGIN Prototypes */
 
-  /* USER CODE END Prototypes */
+/* USER CODE END Prototypes */
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* __SPI_H__ */
+

@@ -6,6 +6,11 @@
     "stm32h7xx_hal.h": "c",
     "lcd_169.h": "c",
     "spi.h": "c",
-    "main.h": "c"
+    "main.h": "c",
+    "lcd_image.h": "c",
+    "lvgl.h": "c",
+    "lvgl_app.h": "c",
+    "stm32h7xx_it.h": "c",
+    "lv_port_disp.h": "c"
   }
 }

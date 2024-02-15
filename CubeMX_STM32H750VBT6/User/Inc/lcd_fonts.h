@@ -3,34 +3,30 @@
 
 #include <stdint.h>
 
-
-// ×ÖÌåÏà¹Ø½á¹¹¶¨Òå
+// å­—ä½“ç›¸å…³ç»“æ„å®šä¹‰
 typedef struct _pFont
-{    
-	const uint8_t 		*pTable;  		//	×ÖÄ£Êı×éµØÖ·
-	uint16_t 			Width; 		 	//	µ¥¸ö×Ö·ûµÄ×ÖÄ£¿í¶È
-	uint16_t 			Height; 			//	µ¥¸ö×Ö·ûµÄ×ÖÄ£³¤¶È
-	uint16_t 			Sizes;	 		//	µ¥¸ö×Ö·ûµÄ×ÖÄ£Êı¾İ¸öÊı
-	uint16_t				Table_Rows;		// ¸Ã²ÎÊıÖ»ÓĞºº×Ö×ÖÄ£ÓÃµ½£¬±íÊ¾¶şÎ¬Êı×éµÄĞĞ´óĞ¡
+{
+  const uint8_t *pTable; //	å­—æ¨¡æ•°ç»„åœ°å€
+  uint16_t Width;        //	å•ä¸ªå­—ç¬¦çš„å­—æ¨¡å®½åº¦
+  uint16_t Height;       //	å•ä¸ªå­—ç¬¦çš„å­—æ¨¡é•¿åº¦
+  uint16_t Sizes;        //	å•ä¸ªå­—ç¬¦çš„å­—æ¨¡æ•°æ®ä¸ªæ•°
+  uint16_t Table_Rows;   // è¯¥å‚æ•°åªæœ‰æ±‰å­—å­—æ¨¡ç”¨åˆ°ï¼Œè¡¨ç¤ºäºŒç»´æ•°ç»„çš„è¡Œå¤§å°
 } pFONT;
 
+/*------------------------------------ ä¸­æ–‡å­—ä½“ ---------------------------------------------*/
 
-/*------------------------------------ ÖĞÎÄ×ÖÌå ---------------------------------------------*/
+extern pFONT CH_Font12; //	1212å­—ä½“
+extern pFONT CH_Font16; //	1616å­—ä½“
+extern pFONT CH_Font20; //	2020å­—ä½“
+extern pFONT CH_Font24; //	2424å­—ä½“
+extern pFONT CH_Font32; //	3232å­—ä½“
 
-extern	pFONT	CH_Font12 ;		//	1212×ÖÌå
-extern	pFONT	CH_Font16 ;    //	1616×ÖÌå
-extern	pFONT	CH_Font20 ;    //	2020×ÖÌå
-extern	pFONT	CH_Font24 ;    //	2424×ÖÌå
-extern	pFONT	CH_Font32 ;    //	3232×ÖÌå
+/*------------------------------------ ASCIIå­—ä½“ ---------------------------------------------*/
 
+extern pFONT ASCII_Font32; // 3216 å­—ä½“
+extern pFONT ASCII_Font24; // 2412 å­—ä½“
+extern pFONT ASCII_Font20; // 2010 å­—ä½“
+extern pFONT ASCII_Font16; // 1608 å­—ä½“
+extern pFONT ASCII_Font12; // 1206 å­—ä½“
 
-/*------------------------------------ ASCII×ÖÌå ---------------------------------------------*/
-
-extern pFONT ASCII_Font32;		// 3216 ×ÖÌå
-extern pFONT ASCII_Font24;		// 2412 ×ÖÌå
-extern pFONT ASCII_Font20; 	// 2010 ×ÖÌå
-extern pFONT ASCII_Font16; 	// 1608 ×ÖÌå
-extern pFONT ASCII_Font12; 	// 1206 ×ÖÌå
-
-#endif 
- 
+#endif
