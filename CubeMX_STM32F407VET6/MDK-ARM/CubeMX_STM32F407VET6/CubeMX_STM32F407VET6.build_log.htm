@@ -1,0 +1,135 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=TIVNB-2CW2P-WF6I7-ETH1M-X2RW0-WKLNT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+\\Mac\Home\Desktop\STM32_Smart_Car\CubeMX_STM32F407VET6\MDK-ARM\CubeMX_STM32F407VET6.uvprojx
+Project File Date:  05/05/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'CubeMX_STM32F407VET6'
+assembling startup_stm32f407xx.s...
+compiling spi.c...
+compiling gpio.c...
+compiling i2c.c...
+../Core/Src/main.c(107): warning: implicit declaration of function 'NRF24L01_RX_Start' is invalid in C99 [-Wimplicit-function-declaration]
+  NRF24L01_RX_Start();
+  ^
+../Core/Src/main.c(120): warning: implicit declaration of function 'NRF24Lo1_RX_Adjusted_ADC_Data' is invalid in C99 [-Wimplicit-function-declaration]
+    ADC_DATA = NRF24Lo1_RX_Adjusted_ADC_Data();
+               ^
+../Core/Src/main.c(120): warning: incompatible integer to pointer conversion assigning to 'uint16_t *' (aka 'unsigned short *') from 'int' [-Wint-conversion]
+    ADC_DATA = NRF24Lo1_RX_Adjusted_ADC_Data();
+             ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c(122): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    OLED_ShowString(0, 0, "ADC0:", 16);
+                          ^~~~~~~
+../Core/Src/../../User/OLED/oled.h(38): note: passing argument to parameter 'chr' here
+void OLED_ShowString(uint8_t x, uint8_t y, uint8_t *chr, uint8_t Char_Size);
+                                                    ^
+../Core/Src/main.c(125): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    OLED_ShowString(0, 2, "ADC1:", 16);
+                          ^~~~~~~
+../Core/Src/../../User/OLED/oled.h(38): note: passing argument to parameter 'chr' here
+void OLED_ShowString(uint8_t x, uint8_t y, uint8_t *chr, uint8_t Char_Size);
+                                                    ^
+../Core/Src/main.c(128): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    OLED_ShowString(0, 4, "ADC2:", 16);
+                          ^~~~~~~
+../Core/Src/../../User/OLED/oled.h(38): note: passing argument to parameter 'chr' here
+void OLED_ShowString(uint8_t x, uint8_t y, uint8_t *chr, uint8_t Char_Size);
+                                                    ^
+../Core/Src/main.c(131): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    OLED_ShowString(0, 6, "ADC3:", 16);
+                          ^~~~~~~
+../Core/Src/../../User/OLED/oled.h(38): note: passing argument to parameter 'chr' here
+void OLED_ShowString(uint8_t x, uint8_t y, uint8_t *chr, uint8_t Char_Size);
+                                                    ^
+../Core/Src/main.c(164): warning: implicit declaration of function 'Car_Direction' is invalid in C99 [-Wimplicit-function-declaration]
+    Car_Direction();
+    ^
+8 warnings generated.
+compiling main.c...
+compiling tim.c...
+compiling stm32f4xx_hal_msp.c...
+compiling stm32f4xx_it.c...
+compiling usart.c...
+compiling stm32f4xx_hal_i2c_ex.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_i2c.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_exti.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_spi.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_tim.c...
+linking...
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol Car_Direction (referred from main.o).
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol NRF24L01_RX_Start (referred from main.o).
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol NRF24Lo1_RX_Adjusted_ADC_Data (referred from main.o).
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol OLED_Clear (referred from main.o).
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol OLED_Init (referred from main.o).
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol OLED_ShowNum (referred from main.o).
+CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf: Error: L6218E: Undefined symbol OLED_ShowString (referred from main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 7 error messages.
+"CubeMX_STM32F407VET6\CubeMX_STM32F407VET6.axf" - 7 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM.CMSIS.6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_CubeMX_STM32F407VET6
+  C:\Users\YellowWenJie\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include
+  C:\Users\YellowWenJie\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:6.0.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:10
+</pre>
+</body>
+</html>

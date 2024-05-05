@@ -76,18 +76,17 @@ void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
-
 }
 
-void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
+void HAL_UART_MspInit(UART_HandleTypeDef *uartHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if(uartHandle->Instance==USART1)
+  if (uartHandle->Instance == USART1)
   {
-  /* USER CODE BEGIN USART1_MspInit 0 */
+    /* USER CODE BEGIN USART1_MspInit 0 */
 
-  /* USER CODE END USART1_MspInit 0 */
+    /* USER CODE END USART1_MspInit 0 */
     /* USART1 clock enable */
     __HAL_RCC_USART1_CLK_ENABLE();
 
@@ -96,7 +95,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     PA9     ------> USART1_TX
     PA10     ------> USART1_RX
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10;
+    GPIO_InitStruct.Pin = GPIO_PIN_9 | GPIO_PIN_10;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -106,20 +105,20 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     /* USART1 interrupt Init */
     HAL_NVIC_SetPriority(USART1_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(USART1_IRQn);
-  /* USER CODE BEGIN USART1_MspInit 1 */
+    /* USER CODE BEGIN USART1_MspInit 1 */
 
-  /* USER CODE END USART1_MspInit 1 */
+    /* USER CODE END USART1_MspInit 1 */
   }
 }
 
-void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
+void HAL_UART_MspDeInit(UART_HandleTypeDef *uartHandle)
 {
 
-  if(uartHandle->Instance==USART1)
+  if (uartHandle->Instance == USART1)
   {
-  /* USER CODE BEGIN USART1_MspDeInit 0 */
+    /* USER CODE BEGIN USART1_MspDeInit 0 */
 
-  /* USER CODE END USART1_MspDeInit 0 */
+    /* USER CODE END USART1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_USART1_CLK_DISABLE();
 
@@ -127,13 +126,13 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     PA9     ------> USART1_TX
     PA10     ------> USART1_RX
     */
-    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9|GPIO_PIN_10);
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9 | GPIO_PIN_10);
 
     /* USART1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(USART1_IRQn);
-  /* USER CODE BEGIN USART1_MspDeInit 1 */
+    /* USER CODE BEGIN USART1_MspDeInit 1 */
 
-  /* USER CODE END USART1_MspDeInit 1 */
+    /* USER CODE END USART1_MspDeInit 1 */
   }
 }
 
@@ -148,33 +147,33 @@ PUTCHAR_PROTOTYPE
 
   return ch;
 }
-//* 锟叫断回碉拷
+//* 閿熷彨鏂洖纰夋嫹
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 
-  //* USART1 锟斤拷锟斤拷
+  //* USART1 閿熸枻鎷烽敓鏂ゆ嫹
   if (huart == &huart1)
   {
 
     printf("%c", USART1_NewData);
-    //* 锟叫讹拷锟斤拷锟斤拷位锟侥碉拷一位?
+    //* 閿熷彨璁规嫹閿熸枻鎷烽敓鏂ゆ嫹浣嶉敓渚ョ鎷蜂竴浣??
     if ((USART1_Rx_STA & 0x8000) == 0)
     {
-      //* 锟叫讹拷锟斤拷锟斤拷位锟侥第讹拷位
+      //* 閿熷彨璁规嫹閿熸枻鎷烽敓鏂ゆ嫹浣嶉敓渚ョ璁规嫹浣?
       if (USART1_Rx_STA & 0x4000)
       {
-        if (USART1_NewData != 0x0a) //? 0x0a(锟斤拷锟斤拷)
+        if (USART1_NewData != 0x0a) //? 0x0a(閿熸枻鎷烽敓鏂ゆ嫹)
           USART1_Rx_STA = 0;
         else
           USART1_Rx_STA |= 0x8000;
       }
       else
-      { //* 锟叫讹拷锟角诧拷锟角回筹拷
+      { //* 閿熷彨璁规嫹閿熻璇ф嫹閿熻鍥炵鎷?
         if (USART1_NewData == 0x0d)
           USART1_Rx_STA |= 0x4000;
         else
         {
-          //* 锟斤拷锟斤拷锟斤拷锟斤拷拥锟斤拷锟斤拷锟斤拷锟�
+          //* 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹鎷ラ敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿燂拷
           USART1_Rx_Buf[USART1_Rx_STA & 0x3FFF] = USART1_NewData;
           USART1_Rx_STA++;
           if (USART1_Rx_STA > (USART1_REC_LEN - 1))
@@ -182,34 +181,34 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         }
       }
     }
-    //* 锟斤拷锟铰匡拷始锟叫讹拷
+    //* 閿熸枻鎷烽敓閾板尅鎷峰閿熷彨璁规嫹
     HAL_UART_Receive_IT(&huart1, (uint8_t *)&USART1_NewData, 1);
   }
-  //* USART2 锟斤拷锟斤拷
+  //* USART2 閿熸枻鎷烽敓鏂ゆ嫹
   // else if (huart == &huart2)
   // {
   //   HAL_UART_Transmit(&huart2, (uint8_t *)&USART2_NewData, 1, 0xFFFF);
 
   //   printf("%c", USART2_NewData);
-  //   //* 锟叫讹拷锟斤拷锟斤拷位锟侥碉拷一位
+  //   //* 閿熷彨璁规嫹閿熸枻鎷烽敓鏂ゆ嫹浣嶉敓渚ョ鎷蜂竴浣?
 
   //   if ((USART2_Rx_STA & 0x8000) == 0)
   //   {
-  //     //* 锟叫讹拷锟斤拷锟斤拷位锟侥第讹拷位
+  //     //* 閿熷彨璁规嫹閿熸枻鎷烽敓鏂ゆ嫹浣嶉敓渚ョ璁规嫹浣?
   //     if (USART2_Rx_STA & 0x4000)
   //     {
-  //       if (USART2_NewData != 0x0a) //? 0x0a(锟斤拷锟斤拷)
+  //       if (USART2_NewData != 0x0a) //? 0x0a(閿熸枻鎷烽敓鏂ゆ嫹)
   //         USART2_Rx_STA = 0;
   //       else
   //         USART2_Rx_STA |= 0x8000;
   //     }
   //     else
-  //     { //* 锟叫讹拷锟角诧拷锟角回筹拷
+  //     { //* 閿熷彨璁规嫹閿熻璇ф嫹閿熻鍥炵鎷?
   //       if (USART2_NewData == 0x0d)
   //         USART2_Rx_STA |= 0x4000;
   //       else
   //       {
-  //         //* 锟斤拷锟斤拷锟斤拷锟斤拷拥锟斤拷锟斤拷锟斤拷锟�
+  //         //* 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹鎷ラ敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿燂拷
   //         USART2_Rx_Buf[USART2_Rx_STA & 0x3FFF] = USART2_NewData;
   //         USART2_Rx_STA++;
   //         if (USART2_Rx_STA > (USART2_REC_LEN - 1))
@@ -217,7 +216,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   //       }
   //     }
   //   }
-  //   //* 锟斤拷锟铰匡拷始锟叫讹拷
+  //   //* 閿熸枻鎷烽敓閾板尅鎷峰閿熷彨璁规嫹
   //   HAL_UART_Receive_IT(&huart2, (uint8_t *)&USART2_NewData, 1);
   // }
 }

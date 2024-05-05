@@ -134,7 +134,7 @@ int main(void)
     // SPEED += increment;
     // if (SPEED == 8400 || SPEED == 0)
     // {
-    //   // 当 a 达到100或0时，切换增量的符号
+    //   // �? a 达到100�?0时，切换增量的符�?
     //   increment = -increment;
     // }
     // HAL_Delay(100);
